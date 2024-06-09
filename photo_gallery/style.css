@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.oswald {
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+.gallery-image {
+    position: relative;
+    flex: 1;
+    min-width: 25%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.gallery-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    transition: opacity 0.5s ease, filter 0.5s ease;
+    opacity: 0;
+    filter: blur(0);
+    z-index: 1;
+}
+.gallery-image .info {
+    position: relative;
+    z-index: 2;
+    margin: 20px;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.gallery-image h2 {
+    margin: 0;
+    font-size: 24px;
+}
+.gallery-image p {
+    margin: 5px 0 0;
+    font-size: 18px;
+}
+.gallery-image .know-more {
+    font-family: "Poppins",sans-serif;
+    display: none;
+    color: rgb(0, 166, 255);
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.gallery-image:hover {
+    transform: scale(1.05);
+    opacity: 1;
+    filter: blur(5px) grayscale(80%);
+}
+.gallery-image:hover .know-more {
+    display: block;
+}
+@media (max-width: 767px) {
+    .caption {
+        display: none;
+    }
+}
+@media (min-width: 768px) {
+    .gallery-image {
+        flex: 1 1 25%;
+    }
+    .caption {
+        display: block;
+        bottom: 40px;
+        left: 40px;
+    }
+}
+
+
+
