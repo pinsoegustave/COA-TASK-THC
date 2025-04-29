@@ -13,3 +13,4 @@ using HTML, CSS and JS and two coding challenges in JS.
  ii, The second file also in the same folder for coding_challenge is also the task given for string transformation where it was  transform a given string. To run the script, run the following command
  node StringTransformation.js
 
+This was a task just to test the skills in html and CSS... and I really cooked. Even the supervisor will be surprised.
